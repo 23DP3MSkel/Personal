@@ -1,0 +1,10 @@
+package Java_mooch_files;
+import java.util.Scanner;
+public class FromParameterToOne {
+    
+    private static Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) {
+        
+
+    }
+}
