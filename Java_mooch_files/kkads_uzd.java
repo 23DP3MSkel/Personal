@@ -7,30 +7,23 @@ public class kkads_uzd {
 private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        ArrayList<Integer> vardi = new ArrayList<>();
-       
+        ArrayList<String> strings = new ArrayList<>();
 
-        while (true){
-            Integer input = Integer.valueOf(scanner.nextLine());
-            if (input.equals(-1)){
-                break;
-            }
-            vardi.add(input);
-        
-        }
+        strings.add("First");
+        strings.add("Second");
+        strings.add("Third");
 
-        
-        System.out.println("search for?");
-        int number = Integer.valueOf(scanner.nextLine());
+        System.out.println(strings);
 
-        for(int i = 0; i<vardi.size();i++){
+        removeLast(strings);
+        removeLast(strings);
 
-            if(vardi.get(i) == number){
-                System.out.println(number + " is at index "+ i);
-            }
-        }
-
-        
-
+        System.out.println(strings);
     }    
+
+    public static void removeLast(ArrayList<String> strings){
+        if (strings.size()>0){
+        strings.remove(strings.size()-1);
+        }
+    }
 }
