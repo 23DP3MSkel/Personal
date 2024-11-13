@@ -18,7 +18,7 @@ private static Scanner scanner = new Scanner(System.in);
         }
 
 
-        System.out.println(vardi.get(2));
+        System.out.println(vardi.size());
 
     }    
 }
