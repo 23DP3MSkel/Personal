@@ -8,6 +8,7 @@ private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         ArrayList<String> vardi = new ArrayList<>();
+        int count = -1;
 
         while (true){
             String input = scanner.nextLine();
@@ -15,10 +16,12 @@ private static Scanner scanner = new Scanner(System.in);
                 break;
             }
             vardi.add(input);
+            count ++;
         }
 
 
-        System.out.println(vardi.size());
+        //System.out.println(vardi.get(count));
+        System.out.println(vardi.get(vardi.size()-1));
 
     }    
 }
