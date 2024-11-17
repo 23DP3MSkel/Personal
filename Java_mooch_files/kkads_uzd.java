@@ -8,8 +8,9 @@ private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         
-        int oldest = 0;
-        String EldestName = "";
+        int birthYearAvg = 0;
+        String LongestName = "";
+        int count = 0;
         
         while(true){
             String input = scanner.nextLine();
@@ -19,15 +20,19 @@ private static Scanner scanner = new Scanner(System.in);
             else{
                 
                 String[] split = input.split(",");
-                int age = Integer.valueOf(split[1]);
-                if (age > oldest){
-                    //oldest = age;
-                    EldestName = split[0];
+                birthYearAvg += Integer.valueOf(split[1]);
+                count ++;
+                if (LongestName.length()<split[0].length()){
+                    LongestName = split[0];
                 }
+                
+                
                 }
         }
         
-        System.out.println("oldest is "+ EldestName);
+        
+        System.out.println("longest name is "+ LongestName);
+        System.out.println("Average of birth year is " + ((double) birthYearAvg / count));
         
     }
         
