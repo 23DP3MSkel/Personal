@@ -11,26 +11,19 @@ private static Scanner scanner = new Scanner(System.in);
         String[] password = {"sunshine","haskell"};
         
         System.out.print("Enter username ");
-        String log = scanner.nextLine();
+        String enteredUsername = scanner.nextLine();
         
         System.out.print("Enter password ");
-        String login = scanner.nextLine();
+        String enteredPassword = scanner.nextLine();
         
 
         for (int i = 0; i<username.length;i++){
-            if(log.equals(username[i])){
-                if(login.equals(password[i])){
-                    System.out.println("You have successfully logged in!");
-                }
-
-                else{
-                    System.out.println("Incorrect username or password!");
-                }
-                break;
-            }
-            if(i == username.length-1){
-                System.out.println("Incorrect username or password!");
+            if(enteredUsername.equals(username[i]) && enteredPassword.equals(password[i])){
+                System.out.println("You logged in!");
+                return;
             }
         }
+
+        System.out.println("Incorrect username or password");
     }
 }
