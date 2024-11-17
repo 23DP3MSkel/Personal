@@ -7,23 +7,26 @@ public class kkads_uzd {
 private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        ArrayList<String> strings = new ArrayList<>();
+    int[] numbers = new int[5];
+    for (int i=0; i<5; i++){
+        numbers[i] = Integer.valueOf(scanner.nextLine());
+    }
+    
+    System.out.println();
+    System.out.println("Which to swap?");
+    int first = Integer.valueOf(scanner.nextLine());
+    int second = Integer.valueOf(scanner.nextLine());
+    int temp = numbers[first];
+    numbers[first] = numbers[second];
+    numbers[second] = temp;
+    System.out.println("");
 
-        strings.add("First");
-        strings.add("Second");
-        strings.add("Third");
+    for (int i=0; i<5;i++){
+        System.out.println(numbers[i]);
+    }
 
-        System.out.println(strings);
+        
 
-        removeLast(strings);
-        removeLast(strings);
-
-        System.out.println(strings);
-    }    
-
-    public static void removeLast(ArrayList<String> strings){
-        if (strings.size()>0){
-        strings.remove(strings.size()-1);
-        }
+       
     }
 }
