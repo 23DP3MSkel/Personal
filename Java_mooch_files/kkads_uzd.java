@@ -14,14 +14,16 @@ private static Scanner scanner = new Scanner(System.in);
                 break;
             }
             else{
-                System.out.println();
+                
                 String[] split = input.split(" ");
                 for(int i=0; i<split.length; i++){
-                    System.out.println(split[i]);
+                    if(split[i].contains("av")){
+                        System.out.println(split[i]);
+                    }
+                    }
                 }
                 System.out.println();
             }
         }
 
     }
-}
