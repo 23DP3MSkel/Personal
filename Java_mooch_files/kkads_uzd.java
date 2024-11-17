@@ -8,31 +8,21 @@ private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         
-        int birthYearAvg = 0;
-        String LongestName = "";
-        int count = 0;
-        
-        while(true){
-            String input = scanner.nextLine();
-            if(input.equals("")){
-                break;
-            }
-            else{
-                
-                String[] split = input.split(",");
-                birthYearAvg += Integer.valueOf(split[1]);
-                count ++;
-                if (LongestName.length()<split[0].length()){
-                    LongestName = split[0];
-                }
-                
-                
-                }
-        }
-        
-        
-        System.out.println("longest name is "+ LongestName);
-        System.out.println("Average of birth year is " + ((double) birthYearAvg / count));
+        Account artosAccount = new Account("Arto's account", 100.00);
+        Account artosSwissAccount = new Account("Arto's account in Switzerland", 1000000.00);
+
+        System.out.println("Initial state");
+        System.out.println(artosAccount);
+        System.out.println(artosSwissAccount);
+
+        artosAccount.withdraw(20);
+        System.out.println("The balance of Arto's account is now: " + artosAccount.balance());
+        artosSwissAccount.deposit(200);
+        System.out.println("The balance of Arto's other account is now: " + artosSwissAccount.balance());
+
+        System.out.println("End state");
+        System.out.println(artosAccount);
+        System.out.println(artosSwissAccount);
         
     }
         
