@@ -16,7 +16,7 @@ private static Scanner scanner = new Scanner(System.in);
         System.out.println("enter the numbers:");
 
 
-        while(input){
+        while(true){
             int input = Integer.valueOf(scanner.nextLine());
             if(input == -1){
                 break;
