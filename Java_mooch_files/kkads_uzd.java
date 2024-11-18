@@ -8,8 +8,16 @@ private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         
-        Product Bananas = new Product("Banana", 1.1, 13);
-        Bananas.printProduct();
+        DecreasingCounter counter = new DecreasingCounter(100);
+
+        counter.printValue();
+
+        counter.reset();
+        counter.printValue();
+
+        counter.decrement();
+        counter.printValue();
+
         
         
     }
