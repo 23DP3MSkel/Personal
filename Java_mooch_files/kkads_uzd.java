@@ -8,33 +8,34 @@ private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         
-        Statistics allNumbers = new Statistics();
-        Statistics evenNumbers = new Statistics();
-        Statistics oddNumbers = new Statistics();
+        PaymentCard PaulsCard = new PaymentCard(20);
+        PaymentCard MattsCard = new PaymentCard(30);
+        
+        
+        PaulsCard.eatHeartily();
+        MattsCard.eatAffordibly();
 
+        System.out.println("Paul: " + PaulsCard);
+        System.out.println("Matt: " + MattsCard);
 
-        System.out.println("enter the numbers:");
+        PaulsCard.addMoney(20);
 
+        MattsCard.eatHeartily();
 
-        while(true){
-            int input = Integer.valueOf(scanner.nextLine());
-            if(input == -1){
-                break;
-            }
-            allNumbers.addNumber(input);
-            if(input % 2 == 0){
-                evenNumbers.addNumber(input);
-            }
-            else{
-                oddNumbers.addNumber(input);
-            }
-        }
-        System.out.println("Sum: "+ allNumbers.sum());
-        System.out.println("Sum of even numbers: "+ evenNumbers.sum());
-        System.out.println("Sum of odd numbers: "+ oddNumbers.sum());
+        System.out.println("Paul: " + PaulsCard);
+        System.out.println("Matt: " + MattsCard);
 
+        PaulsCard.eatAffordibly();
+        PaulsCard.eatAffordibly();
+
+        MattsCard.addMoney(50);
+
+        System.out.println("Paul: " + PaulsCard);
+        System.out.println("Matt: " + MattsCard);
+        
+        
+        
         
         
     }
-        
-    }
+}
