@@ -7,34 +7,37 @@ public class kkads_uzd {
 private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        
-        PaymentCard PaulsCard = new PaymentCard(20);
-        PaymentCard MattsCard = new PaymentCard(30);
-        
-        
-        PaulsCard.eatHeartily();
-        MattsCard.eatAffordibly();
 
-        System.out.println("Paul: " + PaulsCard);
-        System.out.println("Matt: " + MattsCard);
+        ArrayList<Book> books = new ArrayList<>();
 
-        PaulsCard.addMoney(20);
+        while(true){
+            System.out.print("Title: ");
+            String title = scanner.nextLine();
+            if (title.equals("")){
+                break;
+            }
+            else{
+                System.out.print("Pages: ");
+                int pages = Integer.valueOf(scanner.nextLine());
 
-        MattsCard.eatHeartily();
+                System.out.print("year: ");
+                int year = Integer.valueOf(scanner.nextLine());
 
-        System.out.println("Paul: " + PaulsCard);
-        System.out.println("Matt: " + MattsCard);
+                books.add(new Book(title, pages, year));
+            }
+        }
 
-        PaulsCard.eatAffordibly();
-        PaulsCard.eatAffordibly();
+        System.out.print("what do you want to be printed: ");
+        String input = scanner.nextLine();
 
-        MattsCard.addMoney(50);
-
-        System.out.println("Paul: " + PaulsCard);
-        System.out.println("Matt: " + MattsCard);
-        
-        
-        
+        for(Book var:books){
+            if (input.equals("everything")){
+                System.out.println(var);
+            }
+            else if (input.equals("name")){
+                System.out.println(var.name());
+            }
+        }
         
         
     }
