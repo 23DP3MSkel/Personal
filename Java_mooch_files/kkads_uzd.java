@@ -6,17 +6,24 @@ public class kkads_uzd {
 
 private static Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    
+public static void printPersons(ArrayList<Person> persons){
+    for(Person person : persons){
+        System.out.println(person);
+    }
+}
 
 
-        Product tapeMeasure = new Product("Tape measure");
-Product plaster = new Product("Plaster", "home improvement section");
-Product tyre = new Product("Tyre", 5);
 
-System.out.println(tapeMeasure);
-System.out.println(plaster);
-System.out.println(tyre);
-        
+
+public static void main(String[] args) {
+
+
+        ArrayList<Person> persons = new ArrayList<Person>();
+    persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
+    persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
+
+    printPersons(persons);
         
     }
 }
